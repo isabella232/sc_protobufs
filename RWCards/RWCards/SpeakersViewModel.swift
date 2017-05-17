@@ -23,24 +23,19 @@
 import Foundation
 
 class SpeakersViewModel {
-  var speakers: Speakers!
   var selectedSpeaker: Contact?
   
-  init(speakers: Speakers) {
-    self.speakers = speakers
-  }
-  
-  
 	func numberOfRows() -> Int {
-		return speakers.contacts.count
+		return 0
 	}
 	
 	func numberOfSections() -> Int {
 		return 1
 	}
   
-  func getSpeaker(for indexPath: IndexPath) -> Contact {
-    return speakers.contacts[indexPath.item]
+  func getSpeaker(for indexPath: IndexPath) -> Contact? {
+    // TODO
+    return .none
   }
   
   func selectSpeaker(for indexPath: IndexPath) {

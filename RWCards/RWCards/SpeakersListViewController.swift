@@ -39,12 +39,7 @@ class SpeakersListViewController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
     
-    RWService.shared.getSpeakers { [unowned self] speakers in
-      if let speakers = speakers {
-        self.speakersModel = SpeakersViewModel(speakers: speakers)
-        self.tableView.reloadData()
-      }
-    }
+    // TODO
 	}
 	
 	// MARK: - Navigation

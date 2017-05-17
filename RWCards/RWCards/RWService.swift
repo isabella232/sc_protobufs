@@ -33,10 +33,6 @@ class RWService {
     requestContent(path: "/currentUser", completion: completion)
   }
   
-  func getSpeakers(_ completion: @escaping (Speakers?) -> ()) {
-    requestContent(path: "/speakers", completion: completion)
-  }
-  
   private func requestContent<T: SwiftProtobuf.Message>(path: String, completion: @escaping (T?) -> ()) {
     Alamofire.request("\(url)\(path)").responseData { (response) in
       if let data = response.result.value {
