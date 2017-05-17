@@ -24,7 +24,7 @@ Create the protobuf output:
 ```sh
 $ cd ProtoSchema
 $ protoc --swift_out=. contact.proto
-$ protoc -I=. --python_out=. ./contact.proto
+$ protoc -I=. --python_out=../Server ./contact.proto
 ```
 
 Run the python server:
