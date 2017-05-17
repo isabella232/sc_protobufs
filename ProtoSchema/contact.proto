@@ -17,6 +17,3 @@ message Contact {
   string imageName = 7;
 };
 
-message Speakers {
-  repeated Contact contacts = 1;
-}

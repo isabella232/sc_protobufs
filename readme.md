@@ -17,6 +17,7 @@ To use the prebuilt version:
 
 ```sh
 $ docker run -p 127.0.0.1:5000:5000 -it -v $PWD:/opt/protobuf raywenderlich/sc_protobufs
+$ cd protobuf
 ```
 
 Create the protobuf output:
