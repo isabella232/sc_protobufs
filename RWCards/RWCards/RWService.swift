@@ -22,6 +22,7 @@
 
 import Foundation
 import Alamofire
+import SwiftProtobuf
 
 class RWService {
 	static let shared = RWService()
@@ -29,22 +30,18 @@ class RWService {
 	private init() { }
   
   func getCurrentUser(_ completion: @escaping (Contact?) -> ()) {
-    let path = "/currentUser"
-    Alamofire.request("\(url)\(path)").responseData { (response) in
-      if let data = response.result.value {
-        let contact = try! Contact(serializedData: data)
-        return completion(contact)
-      }
-      completion(.none)
-    }
+    requestContent(path: "/currentUser", completion: completion)
   }
   
   func getSpeakers(_ completion: @escaping (Speakers?) -> ()) {
-    let path = "/speakers"
+    requestContent(path: "/speakers", completion: completion)
+  }
+  
+  private func requestContent<T: SwiftProtobuf.Message>(path: String, completion: @escaping (T?) -> ()) {
     Alamofire.request("\(url)\(path)").responseData { (response) in
       if let data = response.result.value {
-        let speakers = try? Speakers(serializedData: data)
-        return completion(speakers)
+        let unserialized = try? T(serializedData: data)
+        return completion(unserialized)
       }
       completion(.none)
     }
