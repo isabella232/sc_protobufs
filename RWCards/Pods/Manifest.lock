@@ -1,0 +1,25 @@
+PODS:
+  - Alamofire (4.2.0)
+  - SwiftProtobuf (0.9.902)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - SwiftProtobuf (from `https://github.com/apple/swift-protobuf.git`, tag `0.9.902`)
+
+EXTERNAL SOURCES:
+  SwiftProtobuf:
+    :git: https://github.com/apple/swift-protobuf.git
+    :tag: 0.9.902
+
+CHECKOUT OPTIONS:
+  SwiftProtobuf:
+    :git: https://github.com/apple/swift-protobuf.git
+    :tag: 0.9.902
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  SwiftProtobuf: 79aa204b6a8b7680740134000a2f6c6ef71e4b95
+
+PODFILE CHECKSUM: dd7111852fbb023a5bcf8c1906550499f8598c51
+
+COCOAPODS: 1.2.1
