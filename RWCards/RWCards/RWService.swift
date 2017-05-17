@@ -35,7 +35,10 @@ class RWService {
   
   private func requestContent<T: SwiftProtobuf.Message>(path: String, completion: @escaping (T?) -> ()) {
     Alamofire.request("\(url)\(path)").responseData { (response) in
-      // TODO
+      if let data = response.result.value {
+        let unserialised = try? T(serializedData: data)
+        return completion(unserialised)
+      }
       completion(.none)
     }
   }
