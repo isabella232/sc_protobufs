@@ -65,12 +65,7 @@ class CardViewController: UIViewController {
   }
   
   func configure(_ contact: Contact) {
-    attendeeNameLabel.attributedText = NSAttributedString.attributedString(for: contact.firstName, and: contact.lastName)
-    twitterLabel.text = contact.twitterName
-    emailLabel.text = contact.email
-    githubLabel.text = contact.githubLink
-    profileImageView.image = UIImage(named: contact.imageName)
-    attendeeTypeLabel.text = contact.contactTypeToString()
+    // TODO
   }
 	
 	// MARK: Appearance
