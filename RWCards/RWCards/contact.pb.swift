@@ -112,6 +112,32 @@ struct Contact: SwiftProtobuf.Message {
   }
 }
 
+struct Speakers: SwiftProtobuf.Message {
+  static let protoMessageName: String = "Speakers"
+
+  var contacts: [Contact] = []
+
+  var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  init() {}
+
+  mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      switch fieldNumber {
+      case 1: try decoder.decodeRepeatedMessageField(value: &self.contacts)
+      default: break
+      }
+    }
+  }
+
+  func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.contacts.isEmpty {
+      try visitor.visitRepeatedMessageField(value: self.contacts, fieldNumber: 1)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 extension Contact: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
@@ -144,4 +170,16 @@ extension Contact.ContactType: SwiftProtobuf._ProtoNameProviding {
     1: .same(proto: "ATTENDANT"),
     2: .same(proto: "VOLUNTEER"),
   ]
+}
+
+extension Speakers: SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .same(proto: "contacts"),
+  ]
+
+  func _protobuf_generated_isEqualTo(other: Speakers) -> Bool {
+    if self.contacts != other.contacts {return false}
+    if unknownFields != other.unknownFields {return false}
+    return true
+  }
 }

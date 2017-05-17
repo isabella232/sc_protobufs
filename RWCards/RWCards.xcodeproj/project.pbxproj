@@ -18,8 +18,8 @@
 		1080494E1DE3BA150002BD64 /* SpeakersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1080494D1DE3BA150002BD64 /* SpeakersListViewController.swift */; };
 		108049511DE3BB7D0002BD64 /* SpeakerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108049501DE3BB7D0002BD64 /* SpeakerCell.swift */; };
 		108049541DE3C1800002BD64 /* NSAttributedString+helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108049531DE3C1800002BD64 /* NSAttributedString+helper.swift */; };
-		22AE252F1ECCB0FC004B3B3D /* contact.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE252E1ECCB0FC004B3B3D /* contact.pb.swift */; };
 		22AE25311ECCB395004B3B3D /* contact+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE25301ECCB395004B3B3D /* contact+extensions.swift */; };
+		22AE25331ECCB939004B3B3D /* contact.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE25321ECCB939004B3B3D /* contact.pb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		1080494D1DE3BA150002BD64 /* SpeakersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersListViewController.swift; sourceTree = "<group>"; };
 		108049501DE3BB7D0002BD64 /* SpeakerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCell.swift; sourceTree = "<group>"; };
 		108049531DE3C1800002BD64 /* NSAttributedString+helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+helper.swift"; sourceTree = "<group>"; };
-		22AE252E1ECCB0FC004B3B3D /* contact.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contact.pb.swift; sourceTree = "<group>"; };
 		22AE25301ECCB395004B3B3D /* contact+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "contact+extensions.swift"; sourceTree = "<group>"; };
+		22AE25321ECCB939004B3B3D /* contact.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contact.pb.swift; sourceTree = "<group>"; };
 		DF5EA85F39595D302E59A663 /* Pods_RWCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RWCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3270109B78E91A85B85F0C /* Pods-RWCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RWCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RWCards/Pods-RWCards.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +93,7 @@
 		106B9D4A1DE27A9900B580C7 /* Protocol Buffer Objects */ = {
 			isa = PBXGroup;
 			children = (
-				22AE252E1ECCB0FC004B3B3D /* contact.pb.swift */,
+				22AE25321ECCB939004B3B3D /* contact.pb.swift */,
 				22AE25301ECCB395004B3B3D /* contact+extensions.swift */,
 			);
 			name = "Protocol Buffer Objects";
@@ -281,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AE25331ECCB939004B3B3D /* contact.pb.swift in Sources */,
 				106B9D491DE277E400B580C7 /* RWService.swift in Sources */,
 				106B9D351DE275AE00B580C7 /* AppDelegate.swift in Sources */,
 				106B9D471DE275FC00B580C7 /* CardViewController.swift in Sources */,
@@ -289,7 +290,6 @@
 				106B9D531DE2888D00B580C7 /* SpeakersViewModel.swift in Sources */,
 				22AE25311ECCB395004B3B3D /* contact+extensions.swift in Sources */,
 				108049541DE3C1800002BD64 /* NSAttributedString+helper.swift in Sources */,
-				22AE252F1ECCB0FC004B3B3D /* contact.pb.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
